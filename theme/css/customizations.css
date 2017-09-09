@@ -1,0 +1,23 @@
+.no-bullet ul, ul.no-bullet {list-style: none;}
+
+.bullet-arrow * li:before {content: "\2192";}
+.bullet-caret * li:before {content: "\2023";}
+.bullet-check * li:before {content: "\2713";}
+
+.bullet-fa-angle * li:before {font-family: 'FontAwesome'; content: "\f105";}
+.bullet-fa-angle-double * li:before {font-family: 'FontAwesome'; content: "\f101";}
+.bullet-fa-check * li:before {font-family: 'FontAwesome'; content: "\f00C";}
+.bullet-fa-check-circle * li:before {font-family: 'FontAwesome'; content: "\f058";}
+.bullet-fa-check-circle-o * li:before {font-family: 'FontAwesome'; content: "\f05d";}
+.bullet-fa-check-square * li:before {font-family: 'FontAwesome'; content: "\f14a";}
+.bullet-fa-check-square-o * li:before {font-family: 'FontAwesome'; content: "\f046";}
+.bullet-fa-edit * li:before {font-family: 'FontAwesome'; content: "\f044";}
+.bullet-fa-hand * li:before {font-family: 'FontAwesome'; content: "\f0a4";}
+
+div.diagram {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    left: 0;
+    top: 0;
+}

@@ -1,0 +1,16 @@
+{% if nav_item.children %}
+      <ul class="subnav">
+        {% if not prev_item or nav_item.title != prev_item.title %}<span>{{ nav_item.title }}</span>{% endif %}
+        {% set level2 = true %}{% for nav_item in nav_item.children %}{% include 'toc.html' %}{% endfor %}
+      </ul>
+{% else %}
+      <li class="toctree-l{% if level2 %}2{% else %}1{% endif %} {% if nav_item.active%}current{%endif%}">
+        <div class="toc-container">
+        <a class="{% if nav_item.active%}current{%endif%}" href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+        </div>
+          {% if nav_item == page and page.toc %}<ul>{% for toc_item in page.toc %}
+                <li class="toctree-l3"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                {% for toc_item in toc_item.children %}    <li><a class="toctree-l4" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+          {% endfor %}{% endfor %}</ul>{% endif %}
+      </li>
+{% endif %}

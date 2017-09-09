@@ -1,0 +1,71 @@
+/*
+Inspired from: http://www.w3schools.com/howto/howto_css_tooltip.asp
+
+Usage:
+  <div class="tooltip">Hover over me
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+ */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted;
+    max-width: auto;
+    min-height: auto;
+    width: auto;
+}
+
+.tooltip > img {
+    position: relative;
+    display: block;
+    bottom: 0;
+    margin: 0 auto !important;
+    padding-bottom: 0 !important;
+    object-fit: contain;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    z-index: 10000;
+    width: 600%;
+    color: #fff;
+    background-color: #555;
+    font-size: 85%;
+    text-align: center;
+    left: -200%;
+    bottom: 150%;
+    margin-left: -50%;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 10px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext > ul, .tooltiptext > ol {
+    text-align: left;
+    font-size: 70%;
+    font-style: normal;
+    margin: 10px 0 0 0;
+}
+.tooltiptext > ol {margin: 20px 0 0 0;}
+.tooltiptext > ul > li {margin: -5px 0;}
+.tooltiptext > ol > li {margin: 10px 10px;}

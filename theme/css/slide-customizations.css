@@ -1,0 +1,66 @@
+section * li {margin-top: 20px !important;}
+section * li:first-child {margin-top: 0 !important;}
+
+h2.slideshow-title {padding-bottom: 80px !important;}
+h3 {padding-bottom: 40px !important;}
+h4 {padding-bottom: 30px !important;}
+
+div.column-left, div.column-right {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: 70%;
+}
+
+div.column-left {
+    width: 20%;
+    text-align: right;
+}
+
+div.column-right {
+    width: 70%;
+    text-align: left;
+}
+
+img.remove-layout {
+    width: 65%;
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+img.icon {width: 5%;}
+li.box {
+    list-style-position: outside;
+    margin-left: 6%;
+    font-size: 85%;
+}
+ul.box-warn {
+    list-style: none;
+    margin-top: 5%;
+}
+ul > li.box:before {
+    position: absolute;
+    display: block;
+    width: 12vw;
+    height: 12vw;
+    content: '\2022';
+    text-indent: -999999px;
+    left: -10px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+}
+ul.box-warn > li.box:before {background-image: url('/img/warn.png');}
+ul.box-info > li.box:before {background-image: url('/img/info.png');}
+
+span.explain {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+div.mindmap > div.jsmind-inner > canvas, div.mindmap > div.jsmind-inner > jmnodes {
+    width: 100% !important;
+    left: 0;
+    margin: 0 auto !important;
+}

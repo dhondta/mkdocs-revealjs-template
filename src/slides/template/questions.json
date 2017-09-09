@@ -1,0 +1,17 @@
+[{
+    "question": "A sample true/false question.",
+    "choices": [
+        "False",
+        "True"
+    ],
+    "answer": 1
+},{
+    "question": "A sample 4-choices question.",
+    "choices": [
+        "Just awesome !",
+        "Nice",
+        "Ugly",
+        "Neutral"
+    ],
+    "answer": 0
+}]

@@ -1,0 +1,76 @@
+pre, code, .rst-content tt, kbd, samp {font-size: 0.8em;}
+
+table.docutils {font-size: 0.8em;}
+
+div.admonition * ul, div.admonition * ol, div.admonition * p:not(.admonition-title) {font-size: 0.8em;}
+
+div.reminder {
+    padding: 12px;
+    line-height: 24px !important;
+    margin-bottom: 24px;
+    background: #CCCCCC;
+}
+
+div.reminder > .admonition-title {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    color: #fff;
+    background: #808080;
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+}
+
+details {
+    background-color: #e7f2fa;
+    border: solid 1px #e1e4e5;
+    border-radius: 6px;
+}
+details * {font-size: 95% !important;}
+details > summary {font-size: 100% !important;}
+
+iframe.slideshow {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+}
+
+li.toctree-l1.current * a.current {padding: 0.4045em 1.618em !important;}
+li.toctree-l2.current * a.current {padding: 0.4045em 2.427em !important;}
+
+li {margin-top: 10px;}
+
+li.toctree-l1 {font-weight: bold !important;}
+li.toctree-l1 div.toc-container {position: relative;}
+li.toctree-l1 div.toc-container a {width: 100%;}
+li.toctree-l1 div.toc-container a.collapse-navbar {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 0;
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    z-index: 1001;
+}
+
+ul.subnav {margin-bottom: 15px;}
+
+li.toctree-l2 {font-size: 92% !important;}
+
+li.toctree-l3 {
+    margin-top: 0px !important;
+    font-size: 85% !important;
+}
+li.toctree-l3 > a:before {content: "\2023 \0020";}
+li.toctree-l3 > a {
+    width: 105%;
+    padding: 5px 34px !important;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}

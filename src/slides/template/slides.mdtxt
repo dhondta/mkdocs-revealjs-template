@@ -1,0 +1,71 @@
+## <!-- .element: class="slideshow-title" --> Introduction
+
+<small>by Happy-Doc-Writer, 01/01/01</small>
+
+-----
+
+## Your first slideshow section
+
+By using `-----`, you define a new section (browsable by going left/right).
+
+----
+
+### This is a slide of the current section
+
+By using `----`, you only define a new section slide (browsable by going up/down).
+
+-----
+
+## An example of slide
+
+<!-- As it can be seen here, HTML code can be used inside the Markdown file -->
+
+<small style="width: 55%; position: relative; bottom: 100px;">
+
+**A sample of bash listing box**
+
+```bash
+$ whoami
+happy-doc-writer
+```
+
+</small>
+
+----
+
+## An example of flowchart
+
+See Ref [1] for more examples.
+
+----
+
+--flowchart--
+
+----
+
+## An example of mindmap
+
+See Ref [2] for more examples.
+
+----
+
+--mindmap--
+
+----
+
+## An example of quizz
+
+----
+
+---quizz---
+
+-----
+
+## References
+
+<small>
+- [1] *Flowchart.js*, available at http://flowchart.js.org/.
+- [2] *JsMind*, available at https://github.com/hizzgdev/jsmind/.
+
+</small>
+
