@@ -2,7 +2,15 @@ pre, code, .rst-content tt, kbd, samp {font-size: 0.8em;}
 
 table.docutils {font-size: 0.8em;}
 
-div.admonition * ul, div.admonition * ol, div.admonition * p:not(.admonition-title) {font-size: 0.8em;}
+details.note > div.admonition.note { margin-bottom: 0px; }
+div.admonition.danger > ol { margin-bottom: 0px; }
+div.admonition.reminder > ul { margin-bottom: 0px; }
+div.admonition.important > p { margin-bottom: 0px; }
+div.admonition.important > ul { margin-bottom: 0px; }
+div.admonition.important > table { margin-bottom: 0px; }
+div.admonition * ul, div.admonition * ol, div.admonition * p:not(.admonition-title) {font-size: 90% !important;}
+
+.codehilite { line-height: 16px !important; }
 
 div.reminder {
     padding: 12px;
@@ -22,12 +30,19 @@ div.reminder > .admonition-title {
     margin-bottom: 12px;
 }
 
+p { margin: 10px 10px 10px 10px; }
+li > p { margin: 0px 0px 10px 0px; }
+
 details {
-    background-color: #e7f2fa;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #dddddd;
+    background-color: #dddddd;
     border: solid 1px #e1e4e5;
     border-radius: 6px;
+    box-shadow: 6px;
 }
-details * {font-size: 95% !important;}
+details * {font-size: 90% !important;}
 details > summary {font-size: 100% !important;}
 
 iframe.slideshow {
@@ -38,8 +53,6 @@ iframe.slideshow {
 
 li.toctree-l1.current * a.current {padding: 0.4045em 1.618em !important;}
 li.toctree-l2.current * a.current {padding: 0.4045em 2.427em !important;}
-
-li {margin-top: 10px;}
 
 li.toctree-l1 {font-weight: bold !important;}
 li.toctree-l1 div.toc-container {position: relative;}

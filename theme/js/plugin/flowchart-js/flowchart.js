@@ -2,13 +2,13 @@
  * Reveal.js flowchart plugin
  * (c) Alexandre D'Hondt 2016
  *
- * See Jsmind at: https://github.com/adrai/flowchart.js/
+ * See Flowchart.js at: https://github.com/adrai/flowchart.js/
  */
 $(function () {
     var diagram = $("div#flowchart"), fn = "process.diag";
     if (diagram.length) {
-        loadResource( '../../../js/plugin/flowchart-js/flowchart.css', 'stylesheet', function() {
-        loadResource( '../../../js/plugin/flowchart-js/svg-innerhtml.js', 'script', function() {
+        loadResource( '../../js/plugin/flowchart-js/flowchart.css', 'stylesheet', function() {
+        loadResource( '../../js/plugin/flowchart-js/svg-innerhtml.js', 'script', function() {
             var get_flowchart = new XMLHttpRequest();
             get_flowchart.overrideMimeType( 'text/plain; charset=utf-8' );
 
@@ -16,12 +16,14 @@ $(function () {
 			    if( get_flowchart.readyState === 4 ) {
 				    if ( ( get_flowchart.status >= 200 && get_flowchart.status < 300 ) || get_flowchart.status === 0 ) {
                         var p = flowchart.parse(get_flowchart.responseText), diagram = $("div#flowchart");
-					    p.drawSVG(this, flowchart_options); // NB: of course, flowchart_options is loaded in an apart js file
+              // NB: of course, flowchart_options is loaded in an apart js file
+					    p.drawSVG(this, flowchart_options);
                         $('svg').appendTo(diagram);
 				    } else {
 					    diagram.text('ERROR: The attempt to fetch "' + fn + '" failed with HTTP status ' + get_flowchart.status + '.' +
 						    'Check your browser\'s JavaScript console for more details.' +
 						    '<p>Remember that you need to serve the presentation HTML from a HTTP server.</p>');
+						  console.log(get_flowchart.status);
 				    }
 			    }
 		    };

@@ -8,14 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if page and page.is_homepage %}<meta name="description" content="{{ config.site_description }}">{% endif %}
   {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+  {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
   {% if config.site_favicon %}<link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
-  {% else %}<link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">{% endif %}
+  {% else %}<link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">{% endif %}
   {%- endblock %}
 
   {%- block htmltitle %}
   <title>{% if page and page.title and not page.is_homepage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
   {%- endblock %}
   
+  <script>var base_url = '{{ base_url }}';</script>
+
   {%- block styles %}
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
@@ -24,27 +27,28 @@
   {%- endfor %}
   {%- endblock %}
 
-  <link rel="stylesheet" href="{{ base_url }}/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="{{ base_url }}/css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="{{ base_url }}/css/highlight.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/codehilite.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/tooltip.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/customizations.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/site-customizations.css">
+  <link rel="stylesheet" href="{{ 'css/theme.css'|url }}" type="text/css"/>
+  <link rel="stylesheet" href="{{ 'css/theme_extra.css'|url }}" type="text/css"/>
+  <link rel="stylesheet" href="{{ 'css/highlight.css'|url }}" type="text/css"/>
+  <link rel="stylesheet" href="{{ 'css/codehilite.css'|url }}" type="text/css">
+  <link rel="stylesheet" href="{{ 'css/tooltip.css'|url }}" type="text/css">
+  <link rel="stylesheet" href="{{ 'css/font-awesome.min.css'|url }}" type="text/css">
+  <link rel="stylesheet" href="{{ 'css/material-icons.css'|url }}" type="text/css"/>
+  <link rel="stylesheet" href="{{ 'css/customizations.css'|url }}" type="text/css">
+  <link rel="stylesheet" href="{{ 'css/site-customizations.css'|url }}" type="text/css">
 
   {%- block libs %}
   {% if page %}
   <script>
     // Current page data
     var mkdocs_page_name = {{ page.title|tojson|safe }};
-    var mkdocs_page_input_path = {{ page.input_path|tojson|safe }};
+    var mkdocs_page_input_path = {{ page.file.src_path|string|tojson|safe }};
     var mkdocs_page_url = {{ page.abs_url|tojson|safe }};
   </script>
   {% endif %}
-  <script src="{{ base_url }}/js/jquery.min.js"></script>
-  <script src="{{ base_url }}/js/modernizr.min.js"></script>
-  <script type="text/javascript" src="{{ base_url }}/js/highlight.pack.js"></script>
+  <script src="{{ 'js/jquery.min.js'|url }}"></script>
+  <script src="{{ 'js/modernizr.min.js'|url }}"></script>
+  <script type="text/javascript" src="{{ 'js/highlight.pack.js'|url }}"></script>
   {%- endblock %}
 
   {%- block extrahead %} {% endblock %}
@@ -65,10 +69,8 @@
   {%- for path in extra_javascript %}
     <script src="{{ path }}"></script>
   {%- endfor %}
-	<script src="{{ base_url }}/js/extra/raphael.min.js"></script>
-    <script src="{{ base_url }}/js/extra/flowchart.min.js"></script>
-    <script src="{{ base_url }}/js/extra/flowchart-options.js"></script>
-    <script src="{{ base_url }}/js/extra/collapsible-sidebar.js"></script>
+	  <script src="{{ 'js/extra/raphael.min.js'|url }}"></script>
+    <script src="{{ 'js/extra/collapsible-sidebar.js'|url }}"></script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -127,7 +129,7 @@
   {% include "versions.html" %}
 
   {%- block scripts %}
-    <script src="{{ base_url }}/js/theme.js"></script>
+    <script src="{{ 'js/theme.js'|url }}"></script>
   {%- endblock %}
 
 </body>

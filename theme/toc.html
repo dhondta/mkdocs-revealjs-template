@@ -6,7 +6,7 @@
 {% else %}
       <li class="toctree-l{% if level2 %}2{% else %}1{% endif %} {% if nav_item.active%}current{%endif%}">
         <div class="toc-container">
-        <a class="{% if nav_item.active%}current{%endif%}" href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+        <a class="{% if nav_item.active%}current{%endif%}" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
         </div>
           {% if nav_item == page and page.toc %}<ul>{% for toc_item in page.toc %}
                 <li class="toctree-l3"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>

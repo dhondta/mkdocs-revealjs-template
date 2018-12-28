@@ -1,7 +1,7 @@
 # Reference: http://mkdocs.org
 site_name: <<Enter the title here>>
 site_author: <<Enter your name>>
-pages:
+nav:
   - 'Introduction': index.md
   - 'Introduction':
     - 'A sample slideshow': slides/intro.md
@@ -14,6 +14,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - codehilite
+  - pymdownx.details
   - fenced_code
   - fontawesome_markdown
   - nl2br
@@ -22,8 +23,10 @@ extra_javascript: []
 extra_css: []
 # if true: use e.g. '/subdir/' instead of '/subdir/index.html'
 use_directory_urls: true
-theme: readthedocs
+theme:
+  name: readthedocs
+  custom_dir: theme
+  # or mkdocs-revealjs-template/theme if the template is used as a git submodule
 docs_dir: src
-theme_dir: theme
-build_dir: '/tmp'
+site_dir: '/tmp'
 #dev_addr: '0.0.0.0:8000'

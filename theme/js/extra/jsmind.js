@@ -719,7 +719,7 @@
                     xml_doc = parser.parseFromString(xml,'text/xml');
                 }else{ // Internet Explorer
                     xml_doc = new ActiveXObject('Microsoft.XMLDOM');
-                    xml_doc.async = false;
+                    xml_doc.async = true;
                     xml_doc.loadXML(xml); 
                 }
                 return xml_doc;

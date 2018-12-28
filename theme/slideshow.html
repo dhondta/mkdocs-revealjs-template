@@ -14,12 +14,12 @@
  		<link rel="stylesheet" href="/css/slide-customizations.css">
    	<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="/css/zenburn.css">
-        <script src="/js/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="/js/extra/raphael.min.js"></script>
-        <script src="/js/extra/flowchart.min.js"></script>
-        <script src="/js/extra/flowchart-options.js"></script>
-        <script src="/js/extra/jsmind.js"></script>
-        <script src="/js/extra/jsmind-options.js"></script>
+    <script src="/js/extra/flowchart.min.js"></script>
+    <script src="/js/extra/flowchart-options.js"></script>
+    <script src="/js/extra/jsmind.js"></script>
+    <script src="/js/extra/jsmind-options.js"></script>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -57,45 +57,45 @@
 				// More info https://github.com/hakimel/reveal.js#dependencies
                 // Also see https://theno.github.io/revealjs_template/
 				dependencies: [
-                    { src: '/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: '/js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '/js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '/js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '/js/plugin/zoom-js/zoom.js' },
+          { src: '/js/plugin/zoom-js/zoom.js' },
 					{ src: '/js/plugin/notes/notes.js', async: true },
-                    { src: '/js/plugin/menu/menu.js' },
-                    { src: '/js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } },
-                    { src: '/js/plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
-                    { src: '/js/plugin/flowchart-js/flowchart.js', async: true },
-                    { src: '/js/plugin/quizz/quizz.js', async: true },
-                    { src: '/js/plugin/jsmind/jsmind.js', async: true },
+          { src: '/js/plugin/menu/menu.js' },
+          { src: '/js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } },
+          { src: '/js/plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+          { src: '/js/plugin/flowchart-js/flowchart.js', async: false },
+          { src: '/js/plugin/quizz/quizz.js', async: false },
+          { src: '/js/plugin/jsmind/jsmind.js', async: false },
 				],
-                // plugin menu, cf. https://github.com/denehyg/reveal.js-menu#configuration
-                menu: {
-                    side: 'left',
-                    numbers: false,
-                    titleSelector: 'h1, h2, h3, h4, h5, h6',
-                    hideMissingTitles: false,
-                    markers: false,
-                    custom: false,
-                    themes: [
-                        { name: 'Black', theme: '/css/theme/black.css' },
-                        { name: 'White', theme: '/css/theme/white.css' },
-                        { name: 'League', theme: '/css/theme/league.css' },
-                        { name: 'Sky', theme: '/css/theme/sky.css' },
-                        { name: 'Beige', theme: '/css/theme/beige.css' },
-                        { name: 'Simple', theme: '/css/theme/simple.css' },
-                        { name: 'Serif', theme: '/css/theme/serif.css' },
-                        { name: 'Blood', theme: '/css/theme/blood.css' },
-                        { name: 'Night', theme: '/css/theme/night.css' },
-                        { name: 'Moon', theme: '/css/theme/moon.css' },
-                        { name: 'Solarized', theme: '/css/theme/solarized.css' }
-                    ],
-                    transitions: true,
-                    openButton: true,
-                    openSlideNumber: true,
-                    keyboard: true
-                }
+        // plugin menu, cf. https://github.com/denehyg/reveal.js-menu#configuration
+        menu: {
+            side: 'left',
+            numbers: false,
+            titleSelector: 'h1, h2, h3, h4, h5, h6',
+            hideMissingTitles: false,
+            markers: false,
+            custom: false,
+            themes: [
+                { name: 'Black', theme: '/css/theme/black.css' },
+                { name: 'White', theme: '/css/theme/white.css' },
+                { name: 'League', theme: '/css/theme/league.css' },
+                { name: 'Sky', theme: '/css/theme/sky.css' },
+                { name: 'Beige', theme: '/css/theme/beige.css' },
+                { name: 'Simple', theme: '/css/theme/simple.css' },
+                { name: 'Serif', theme: '/css/theme/serif.css' },
+                { name: 'Blood', theme: '/css/theme/blood.css' },
+                { name: 'Night', theme: '/css/theme/night.css' },
+                { name: 'Moon', theme: '/css/theme/moon.css' },
+                { name: 'Solarized', theme: '/css/theme/solarized.css' }
+            ],
+            transitions: true,
+            openButton: true,
+            openSlideNumber: true,
+            keyboard: true
+        }
 			});
 		</script>
 	</body>

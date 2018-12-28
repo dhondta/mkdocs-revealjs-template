@@ -102,7 +102,6 @@
 	 * values for what's not defined.
 	 */
 	function getSlidifyOptions( options ) {
-
 		options = options || {};
 		options.separator = options.separator || DEFAULT_SLIDE_SEPARATOR;
 		options.notesSeparator = options.notesSeparator || DEFAULT_NOTES_SEPARATOR;
@@ -126,7 +125,7 @@
 		var quizzMatch = content.split( new RegExp( options.quizzSeparator, 'mgi' ) );
 		var flowchartMatch = content.split( new RegExp( options.flowchartSeparator, 'mgi' ) );
 		var mindmapMatch = content.split( new RegExp( options.mindmapSeparator, 'mgi' ) );
-
+		
         if( quizzMatch.length === 2 ) {
             content = quizzMatch[0] + '<blockquote class="quizz">'
                                     + '<p class="quizz-question"></p>'
@@ -134,8 +133,8 @@
                                     + '<button class="quizz-next"></button>'
                                     + '<div class="quizz-result"></div>'
                                     + '</blockquote>' + marked( quizzMatch[1].trim() );
-		}
-
+		    }
+		
         if( flowchartMatch.length === 2 ) {
             content = flowchartMatch[0] + '<div id="flowchart" class="diagram"></div>' + marked( flowchartMatch[1].trim() );
         }
