@@ -49,6 +49,8 @@ The following extra [Reveal.js](http://lab.hakim.se/reveal-js) plugins are avail
 $ git clone https://github.com/dhondta/mkdocs-revealjs-template
 [...]
 $ cd mkdocs-revealjs-template
+$ mv src_example src
+$ mv mkdocs.yml.template mkdocs.yml
 $ cp src/slides/template.md src/slides/intro.md
 $ cp -r src/slides/template src/slides/intro
 $ mkdocs serve
