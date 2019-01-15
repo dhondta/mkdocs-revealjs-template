@@ -4,6 +4,8 @@ This project provides a template of static documentation website for [MkDocs](ht
 
 It nests [Reveal.js](http://lab.hakim.se/reveal-js) for integrating nice-looking slideshows in order to make more didactical documentations.
 
+An example can be found at [`dhondta/pentest-for-beginners`](https://github.com/dhondta/pentest-for-beginners).
+
 
 ## Features
 
